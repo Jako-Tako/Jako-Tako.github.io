@@ -54,11 +54,21 @@ function checkCode() {
     if (isMatch) {
         $('#form, #button').hide();
         $('#film').show();
+        $('title').text('Gratulacje!')
         showToast("Kod poprawny! Przejdź dalej.", "success");
+        let toggle = true;
+        setInterval(() => {
+            $('title').text(toggle ? '🥳' : '🎉');
+            toggle = !toggle;
+        }, 500);
     } else {
         $('#1, #2, #3, #4, #5, #6, #7, #8, #9, #10, #11').val('');
         showToast("Błędny kod!", "error");
     }
+}
+
+function goTo() {
+    window.open('https://www.youtube.com/', '_blank');
 }
 
 
