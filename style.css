@@ -7,16 +7,20 @@
 }
 
 body {
-    width: 95vw;
-    height: 95vh;
-}
-
-body {
-    background-image: url(background1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(Okładka.jpg);
     background-size: cover;
-}
+    background-repeat: no-repeat;
+    background-position: center;
+} 
 
 #container {
     display: flex;
@@ -33,29 +37,38 @@ form {
     align-items: center;
     width: 75%;
     height: 30%;
+    /* background-color: rgba(0, 0, 0, 0.9); */
 }
 
 input[type=text] {
     font-size: 1.5rem;
     width: 75px;
     height: 75px;
-    background: rgba(0, 0, 0, 0.5);
-    border: 2px solid #781a34;
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #0088FF;
     border-radius: 25%;
     text-align: center;
+    transition: transform 0.5s, scale 0.5s;
+}
+
+input[type=text]:focus {
+    outline: none;
+    scale: 1.2;
+    transition: transform 0.5s, scale 0.5s;
 }
 
 button {
-    background: rgba(0, 0, 0, 0.5);
-    border: 2px solid #781a34;
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #0088FF;
     border-radius: 25px;
     font-size: 1.2rem;
     padding: 10px;
     transition: transform 0.5s, scale 0.5s;
 }
 
-button:hover {
+button:hover, button:focus {
     cursor: pointer;
+    outline: none;
     scale: 1.2;
     transition: transform 0.5s, scale 0.5s;
 }
