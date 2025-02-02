@@ -1,4 +1,4 @@
-const obfuscatedCode = ["1", "1", "4", "7", "3", "2", "1", "3", "3", "J", "D"];
+const obfuscatedCode = ["1", "1", "4", "7", "3", "2", "1", "3", "3", "S", "F"];
 var errorAudio = new Audio('error.mp3');
 var successAudio = new Audio('success.mp3');
 
